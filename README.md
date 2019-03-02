@@ -18,6 +18,8 @@ These medications can slightly slow down the progression of the disease.
 ### Prevention
 It is thought that frequent mental and physical exercise may reduce risk.
 
+---
+
 ## Project Motivation
 The Alzheimer's Association estimates nearly 6 million Americans suffer from the disease and is the 6th leading cause of death in the US. The estimated cost of AD was $277 billion just in the US. They estimate *early and accurate* diagnoses could save up to $7.9 trillion in medical and care costs over the next 30 years. 
 
@@ -26,3 +28,5 @@ Sources: [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/alzheimers
 
 ### Project Description: 
 Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our goal to develop a computer model that assists in the diagnosis of the disease. We will try multiple models recently popularized in machine learning (neural networks, SVM's, Random Forests) and more traditional statistical models such as multinomial regression, ordinal regression, and decision trees. 
+
+
