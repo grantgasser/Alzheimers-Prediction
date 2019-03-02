@@ -9,7 +9,7 @@ Onset of the disease is slow and early symptoms are often dismissed as normal si
 
 ### Treatment
 There is no medication that stops or reverses the progression of AD. There are two types of drugs that attempt to treat the cognitive symptoms:
-* Acetylcholinesterase inhibitors that work to prevent the breakdown of acetylcholine, a neuorotransmitter critical in memory and cognition. 
+* Acetylcholinesterase Inhibitors that work to prevent the breakdown of acetylcholine, a neuorotransmitter critical in memory and cognition. 
 * Memantine (Namenda), which works to inhibit NMDA receptors in the brain.
 These medications can slightly slow down the progression of the disease.
 
