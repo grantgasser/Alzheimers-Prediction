@@ -34,7 +34,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 ### Ordinal Regression in R (CN < LMCI < AD)
 * File: [ordinal.R](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/ordinal.R)
-* Features/Predictor Variables Used: AGE Age at baseline, PTGENDER	Sex, PTEDUCAT	Years of Education, PTRACCAT Race, APOE4 APOE4 genotype, MMSE	MMSE score, Imputed_genotype Challenge specific designation, TRUE=has imputed genotypes
+* Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
 * Labels: (CN, LMCI, AD)
 
 **Results:** 70% accuracy (110/157)
