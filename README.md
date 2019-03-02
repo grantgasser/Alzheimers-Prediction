@@ -35,7 +35,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 ### Ordinal Regression in R (CN < LMCI < AD)
 * File: ordinal.R
 * Features/Predictor Variables Used:
-⋅⋅* AGE	Age at baseline
+..* AGE	Age at baseline
 ⋅⋅* PTGENDER	Sex
 ⋅⋅* PTEDUCAT	Years of Education
 ⋅⋅* PTRACCAT	Race
