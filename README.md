@@ -24,5 +24,5 @@ The Alzheimer's Association estimates nearly 6 million Americans suffer from the
 Sources: [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-20350447 "Mayo Clinic - Alzheimer's Disease"), [Alzheimer's Association](https://www.alz.org/alzheimers-dementia/facts-figures), [Wikipedia](https://en.wikipedia.org/wiki/Alzheimer's_disease)
 
 
-### Project Description Inline-style: 
+### Project Description: 
 Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our goal to develop a computer model that assists in the diagnosis of the disease. We will try multiple models recently popularized in machine learning (neural networks, SVM's, Random Forests) and more traditional statistical models such as multinomial regression, ordinal regression, and decision trees. 
