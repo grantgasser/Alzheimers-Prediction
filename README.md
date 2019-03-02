@@ -29,4 +29,19 @@ Sources: [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/alzheimers
 ### Project Description: 
 Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our goal to develop a computer model that assists in the diagnosis of the disease. We will try multiple models recently popularized in machine learning (neural networks, SVM's, Random Forests) and more traditional statistical models such as multinomial regression, ordinal regression, and decision trees. 
 
+---
+## Methods
 
+### Ordinal Regression in R (CN < LMCI < AD)
+* File: ordinal.R
+* Features/Predictor Variables Used:
+⋅⋅* AGE	Age at baseline
+⋅⋅* PTGENDER	Sex
+⋅⋅* PTEDUCAT	Years of Education
+⋅⋅* PTRACCAT	Race
+⋅⋅* APOE4	APOE4 genotype
+⋅⋅* MMSE	MMSE score
+⋅⋅* imputed_genotype	Challenge specific designation, TRUE=has imputed genotypes
+* Labels: (CN, LMCI, AD)
+
+** Results: ** 70% accuracy (110/157)
