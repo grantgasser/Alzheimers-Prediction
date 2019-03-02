@@ -35,7 +35,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 ### Ordinal Regression in R (CN < LMCI < AD)
 * File: ordinal.R
 * Features/Predictor Variables Used:
-..* AGE	Age at baseline
+- AGE	Age at baseline
 ⋅⋅* PTGENDER	Sex
 ⋅⋅* PTEDUCAT	Years of Education
 ⋅⋅* PTRACCAT	Race
@@ -44,4 +44,4 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 ⋅⋅* imputed_genotype	Challenge specific designation, TRUE=has imputed genotypes
 * Labels: (CN, LMCI, AD)
 
-** Results: ** 70% accuracy (110/157)
+**Results:** 70% accuracy (110/157)
