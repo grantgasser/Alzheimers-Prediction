@@ -39,3 +39,6 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Labels: (CN, LMCI, AD)
 
 **Results:** 70% accuracy (110/157)
+* Looking into better model evaluation metrics for ordinal regression.
+
+**Note:** The model assumes the diagnoses provided are correct. Since a diagnosis cannot be verified until autopsy, there is essentially no ground truth in this data set.
