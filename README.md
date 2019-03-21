@@ -39,6 +39,6 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Labels: (CN, LMCI, AD)
 
 **Results:** 70% accuracy (110/157)
-* Looking into better model evaluation metrics for ordinal regression.
+* Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
 
 **Note:** The model assumes the diagnoses provided are correct. Since a diagnosis cannot be verified until autopsy, there is essentially no ground truth in this data set.
