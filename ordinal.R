@@ -51,7 +51,7 @@ Y = factor(Y, levels=c('CN', 'LMCI', 'AD'), ordered=TRUE)
 y_test = factor(y_test, levels=c('CN', 'LMCI', 'AD'), ordered=TRUE)
 head(Y)
 
-#May try to fit ordinal regression considering cognitive state as a spectrum CN -> LMCI -> AD
+#Fit ordinal regression considering cognitive state as a spectrum CN < LMCI < AD
 
 #Train-test split: 75% train (471), 25% test (157)
 num_test = num_rows/4
@@ -72,7 +72,7 @@ library(MASS)
 library(car)
 library(glm.predict)
 
-#Remove Ethnicity (doesn't provide much info) and APOE.Genotype variable (polr function can't handle the)
+#Remove Ethnicity (PTETHCAT, doesn't provide much info) and APOE.Genotype variable (polr function can't handle the)
 ordinal.fit = polr(y_train ~ .-PTETHCAT -APOE.Genotype, data=train, Hess=TRUE)
 summary(ordinal.fit) #AIC = 583
 
@@ -95,5 +95,19 @@ accuracy = num_correct / num_test
 #For example, it is much worse to diagnose someone as Cognitively Normal (CN) when in fact they have Alheimer's (AD) than it is
 #to diagnose someone as Limited Mild Cognitively Impaired (LMCI) when they are Cognitively Normal (CN), along with many other cases.
 
-#TODO: Use other model evaluation metrics
 # Look at common mistakes
+incorrect_predictions = predictions[!accuracy_vector]
+labels_incorrectly_predicted = y_test[!accuracy_vector]
+
+#plot
+barplot(prop.table(table(incorrect_predictions)))
+barplot(prop.table(table(labels_incorrectly_predicted)))
+
+#On incorrect predictions, predicted CN too often (~50% of the time) where CN was <10% of the actual correct labels for
+#observations incorrectly predicted. Can be viewed as a False Negative and would be very bad to predict CN when a patient 
+#has LMCI or AD. 
+
+#Distribution of incorrect predictions:48% CN, 40% LMCI, 12% AD
+#Distribution of labels on incorrect predictions: 8% CN, 60% LMCI, 30% AD
+
+#Main problem: False Negatives. Predicting CN and under-predicting LMCI and AD. 
