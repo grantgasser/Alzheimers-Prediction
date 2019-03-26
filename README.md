@@ -31,6 +31,11 @@ Sources: [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/alzheimers
 Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our goal to develop a computer model that assists in the diagnosis of the disease. We will try multiple models recently popularized in machine learning (neural networks, SVM's, Random Forests) and more traditional statistical models such as multinomial regression, ordinal regression, and decision trees. 
 
 ---
+## First Data Set: ADNI Q3
+* 628 observations, 15 features (will likely use subset of features
+
+
+---
 ## Methods
 
 ### Ordinal Regression (Ranking Learning) in R (CN < LMCI < AD)
