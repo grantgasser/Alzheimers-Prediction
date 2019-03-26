@@ -38,7 +38,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
 * Labels: (CN, LMCI, AD)
 
-* There are six scenarios:
+* There are six error scenarios:
 
 | Prediction    | Actual        |Error Type        |
 | ------------- |:-------------:|:-------------:|
@@ -49,11 +49,10 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 | AD     | CN      | False Positive |
 | AD | LMCI      | ? |
 
-**Results:** 70% accuracy (110/157)
-* If y is {LMCI, AD} and prediction = CN, it is a False Negative. If y = CN and prediction is {LMCI, AD}, it is a False Positive.
+**Results:** 70% Test Accuracy (110/157)
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
-* This leads to a model with low sensitivity.
+* This leads to a model with low sensitivity: 
 
-**Propsed Solution:** Only predict CN if CN > some threshold as opposed to predicting max(P(CN), P(LMCI), P(AD)).   
+**Proposed Solution:** Only predict CN if CN > some *learned* threshold (new hyperparameter) as opposed to predicting max(P(CN), P(LMCI), P(AD)).   
 
 **Note:** The model assumes the diagnoses provided are correct. Since a diagnosis cannot be verified until autopsy, there is essentially no ground truth in this data set.
