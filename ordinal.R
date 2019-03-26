@@ -1,7 +1,7 @@
 ## Grant Gasser
 ## Created 2/26/2019
 
-## Exploratory analysis on ADNI data Q3
+## Ordinal Regression on ADNI Q3 Data
 
 #### DATA DESCRIPTION ####
 '''
@@ -90,8 +90,7 @@ accuracy = num_correct / num_test
 
 #Accuracy = 70%
 
-#This metric is not optimal though, as it does not consider the effect of false positives and false negatives. Researching how this
-#is done for ordinal regression since there are >2 classes.
+#This metric is not optimal though, as it does not consider the effect of false positives and false negatives.
 #For example, it is much worse to diagnose someone as Cognitively Normal (CN) when in fact they have Alheimer's (AD) than it is
 #to diagnose someone as Limited Mild Cognitively Impaired (LMCI) when they are Cognitively Normal (CN), along with many other cases.
 
@@ -107,7 +106,7 @@ barplot(prop.table(table(labels_incorrectly_predicted)))
 #observations incorrectly predicted. Can be viewed as a False Negative and would be very bad to predict CN when a patient 
 #has LMCI or AD. 
 
-#Distribution of incorrect predictions:48% CN, 40% LMCI, 12% AD
+#Distribution of incorrect predictions: 48% CN, 40% LMCI, 12% AD
 #Distribution of labels on incorrect predictions: 8% CN, 60% LMCI, 30% AD
 
 #Main problem: False Negatives. Predicting CN and under-predicting LMCI and AD. 
