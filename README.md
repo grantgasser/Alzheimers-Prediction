@@ -33,7 +33,8 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 ---
 ## First Data Set: ADNI Q3
 * 628 observations, 15 features (will likely use subset of features
-
+* Class Label distribution:
+![alt-text](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/class_distribution_q3.JPG?raw=true "Class Distribution Image")
 
 ---
 ## Methods
@@ -56,7 +57,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 **Results:** 70% Test Accuracy (110/157)
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
-* This leads to a model with low sensitivity: 
+* This leads to a model with low sensitivity.
 
 **Proposed Solution:** Only predict CN if P(CN) > some *learned* threshold (new hyperparameter) instead of predicting max(P(CN), P(LMCI), P(AD)).   
 
