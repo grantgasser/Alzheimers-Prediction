@@ -33,17 +33,10 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 ---
 ## First Data Set: ADNI Q3
 * 628 observations, 15 features (will likely use subset of features)
+* Labels: (CN, LMCI, AD)
 * Class Label distribution:
 ![alt-text](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/class_distribution_q3.JPG?raw=true "Class Distribution Image")
 * Features include age, gender, years of education, race, genotype, cognitive test score (MMSE), and more
-
----
-## Methods
-
-### Ordinal Regression (Ranking Learning) in R (CN < LMCI < AD)
-* File: [ordinal.R](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/ordinal.R)
-* Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
-* Labels: (CN, LMCI, AD)
 
 * There are six error scenarios:
 
@@ -55,6 +48,14 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 | LMCI     | AD | ? |
 | AD     | CN      | False Positive |
 | AD | LMCI      | ? |
+
+
+---
+## Methods
+
+### Ordinal Regression (Ranking Learning) in R (CN < LMCI < AD)
+* File: [ordinal.R](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/ordinal.R)
+* Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
 
 **Results:** 70% Test Accuracy (110/157)
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
