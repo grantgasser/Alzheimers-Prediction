@@ -53,6 +53,6 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
 * This leads to a model with low sensitivity: 
 
-**Proposed Solution:** Only predict CN if CN > some *learned* threshold (new hyperparameter) as opposed to predicting max(P(CN), P(LMCI), P(AD)).   
+**Proposed Solution:** Only predict CN if CN > some *learned* threshold (new hyperparameter) as instead of predicting max(P(CN), P(LMCI), P(AD)).   
 
 **Note:** The model assumes the diagnoses provided are correct. Since a diagnosis cannot be verified until autopsy, there is essentially no ground truth in this data set.
