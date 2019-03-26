@@ -51,7 +51,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 
 ---
-## Methods
+## Prediction Models
 
 ### Ordinal Regression (Ranking Learning) in R (CN < LMCI < AD)
 * File: [ordinal.R](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/ordinal.R)
