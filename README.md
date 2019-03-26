@@ -32,9 +32,10 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 ---
 ## First Data Set: ADNI Q3
-* 628 observations, 15 features (will likely use subset of features
+* 628 observations, 15 features (will likely use subset of features)
 * Class Label distribution:
 ![alt-text](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/class_distribution_q3.JPG?raw=true "Class Distribution Image")
+* Features include age, gender, years of education, race, genotype, cognitive test score (MMSE), and more
 
 ---
 ## Methods
