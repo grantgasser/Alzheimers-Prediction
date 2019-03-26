@@ -38,6 +38,14 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
 * Labels: (CN, LMCI, AD)
 
+* There are six scenarios:
+
+| Prediction    | Actual        |
+| ------------- |:-------------:|
+| CN     | LMCI |
+| CN     | AD      |
+| LMCI | CN      |
+
 **Results:** 70% accuracy (110/157)
 * If y is {LMCI, AD} and prediction = CN, it is a False Negative. If y = CN and prediction is {LMCI, AD}, it is a False Positive.
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
