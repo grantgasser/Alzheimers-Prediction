@@ -40,11 +40,14 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 * There are six scenarios:
 
-| Prediction    | Actual        |
-| ------------- |:-------------:|
-| CN     | LMCI |
-| CN     | AD      |
-| LMCI | CN      |
+| Prediction    | Actual        |Error Type        |
+| ------------- |:-------------:|:-------------:|
+| CN     | LMCI | False Negative |
+| CN     | AD      | False Negative |
+| LMCI | CN      | False Positive |
+| LMCI     | AD | ? |
+| AD     | CN      | False Positive |
+| AD | LMCI      | ? |
 
 **Results:** 70% accuracy (110/157)
 * If y is {LMCI, AD} and prediction = CN, it is a False Negative. If y = CN and prediction is {LMCI, AD}, it is a False Positive.
