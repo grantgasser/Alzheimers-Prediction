@@ -49,7 +49,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 | AD     | CN      | False Positive |
 | AD | LMCI      | ? |
 
-**Note:** The models using this data set assume the physician diagnoses (DX.bl) are correct.
+**Important Note:** The models using this data set assume the physician diagnoses (DX.bl) are correct.
 
 ---
 ## Prediction Models
