@@ -49,6 +49,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 | AD     | CN      | False Positive |
 | AD | LMCI      | ? |
 
+**Note:** The models using this data set assume the physician diagnoses (DX.bl) are correct.
 
 ---
 ## Prediction Models
@@ -61,6 +62,4 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
 * This leads to a model with low sensitivity.
 
-**Proposed Solution:** Only predict CN if P(CN) > *some threshold* instead of predicting max(P(CN), P(LMCI), P(AD)).   
-
-**Note:** The model assumes the diagnoses provided are correct. Since a diagnosis cannot be verified until autopsy, there is essentially no ground truth in this data set.
+**Proposed Solution:** Only predict CN if P(CN) > *some threshold* instead of predicting max(P(CN), P(LMCI), P(AD)). This should reduce the amount of CN predictions and thus, reduce the amount of False Negatives.  
