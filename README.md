@@ -73,7 +73,8 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 **Proposed Solution:** Only predict CN if P(CN) > *some threshold* instead of predicting max(P(CN), P(LMCI), P(AD)). This should reduce the amount of CN predictions and thus, reduce the amount of False Negatives.  
 
-### Multi-Class SVM in Python (Jupyter Notebook)
+### Multi-Class Prediction in Python (Jupyter Notebook)
 * File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
 
-* Work in Progress...
+** Models **
+* 
