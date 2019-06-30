@@ -77,7 +77,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
 * Since the data was processed with Scikit-Learn, it was easy to try several models using the library.
 
-* Models
+* Models:
 1. Support Vector Machine (56% accuracy)
 2. Decision Tree Classifier (61% accuracy)
 3. Naive Bayes Classifier (55.4% accuracy)
