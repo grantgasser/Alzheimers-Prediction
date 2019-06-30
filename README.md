@@ -75,7 +75,8 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 ### Multi-Class Prediction in Python (Jupyter Notebook)
 * File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
+* Since the data was processed with Scikit-Learn, it was easy to try several models using the library.
 
 * Models
-⋅⋅* Support Vector Machine
-⋅⋅* 
+⋅⋅* Support Vector Machine (56% accuracy)
+⋅⋅* Decision Tree Classifier (
