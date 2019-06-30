@@ -78,5 +78,13 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Since the data was processed with Scikit-Learn, it was easy to try several models using the library.
 
 * Models
-- Support Vector Machine (56% accuracy)
-- Decision Tree Classifier (
+1. Support Vector Machine (56% accuracy)
+2. Decision Tree Classifier (61% accuracy)
+3. Naive Bayes Classifier (55.4% accuracy)
+4. K = 10 Nearest Neighbor (67.5% accuracy)
+5. Random Forest with 200 estimators (72% accuracy)
+6. Multi-layer perceptron with hidden units = 50, alpha=1 (73.25% accuracy)
+
+### Conclusions on ADNI Q3 Data Set
+- With only 471 training examples and 157 test examples, 73-74% seems to be as good as it gets
+- Overfitting and false negatives still may be a significant problem
