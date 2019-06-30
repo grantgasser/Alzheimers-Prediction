@@ -77,5 +77,5 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
 
 * Models
-..* Support Vector Machine
-..* 
+⋅⋅* Support Vector Machine
+⋅⋅* 
