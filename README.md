@@ -78,5 +78,5 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * Since the data was processed with Scikit-Learn, it was easy to try several models using the library.
 
 * Models
-⋅⋅* Support Vector Machine (56% accuracy)
-⋅⋅* Decision Tree Classifier (
+- Support Vector Machine (56% accuracy)
+- Decision Tree Classifier (
