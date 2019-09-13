@@ -3,7 +3,7 @@
 # Alzheimer's Diagnosis
 Research Project by Grant Gasser under advisement of [Dr. Joshua Patrick](https://www.baylor.edu/statistics/index.php?id=941853 "Joshua Patrick")
 
-# **NOTE**: `Multi-Class Classification ADNI` currently being refactored
+# **NOTE**: `Multi-Class Classification ADNI` notebook is currently being refactored
 
 ![ADNI Picture](http://adni.loni.usc.edu/wp-content/themes/freshnews-dev-v2/images/ADNI_logo_vector.png "ADNI")
 
