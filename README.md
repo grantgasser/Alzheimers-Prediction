@@ -3,7 +3,7 @@
 # Alzheimer's Diagnosis
 Research Project by Grant Gasser under advisement of [Dr. Joshua Patrick](https://www.baylor.edu/statistics/index.php?id=941853 "Joshua Patrick")
 
-# **NOTE**: Notebook currently being refactored
+# **NOTE**: `Multi-Class Classification ADNI` currently being refactored
 
 ![ADNI Picture](http://adni.loni.usc.edu/wp-content/themes/freshnews-dev-v2/images/ADNI_logo_vector.png "ADNI")
 
@@ -77,7 +77,8 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 ### Multi-Class Prediction in Python (Jupyter Notebook)
 * File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
-* Since the data was processed with Scikit-Learn, it was easy to try several models using the library.
+* Since the data was processed with Scikit-Learn, it was easy to try several models using the library such as logistic regression, random forest, k-nearest-neighbor, and multi-layer perceptron.
 
-* Cross Validation with different Models:
-1. Random Forest (67% accuracy)
+* 5-Fold Cross Validation: logistic regression had the highest validation score of `.69`
+
+* Test Result: `.74` test accuracy
