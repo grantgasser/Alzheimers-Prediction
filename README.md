@@ -81,4 +81,4 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 
 * 5-Fold Cross Validation: logistic regression had the highest validation score of `.69`
 
-* Test Result: `.74` test accuracy
+**Results:** 74% Test Accuracy
