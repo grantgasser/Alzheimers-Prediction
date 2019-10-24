@@ -69,7 +69,7 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * File: [ordinal.R](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/ordinal.R)
 * Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
 
-**Results:** 70% Validation Accuracy (110/157)
+**Results:** 70% Test Accuracy (110/157)
 * Main problem with the model is False Negatives. As pointed out at the end of the script, when the model makes incorrect predictions, it often predicts Cognitively Normal (CN) when a patient has Limited Mild Conitive Impairment (LMCI) or Alzheimer's (AD). Roughly 50% of the errors were False Negatives.
 * This leads to a model with low sensitivity.
 
