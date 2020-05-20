@@ -1,7 +1,7 @@
 
 
 # Alzheimer's Diagnosis
-Research Project by Grant Gasser under advisement of [Dr. Joshua Patrick](https://www.baylor.edu/statistics/index.php?id=941853 "Joshua Patrick")
+Data Science Project by Grant Gasser under advisement of [Dr. Joshua Patrick](https://www.baylor.edu/statistics/index.php?id=941853 "Joshua Patrick")
 
 ![ADNI Picture](http://adni.loni.usc.edu/wp-content/themes/freshnews-dev-v2/images/ADNI_logo_vector.png "ADNI")
 
