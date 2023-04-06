@@ -71,9 +71,11 @@ AUC: 0.89
 ```
 
 **Initial confusion matrix** (_before lowering threshold 0.5 -> 0.1 to increase Recall_):
+
 ![Confusion Matrix](assets/confusion_matrix.png)
 
 **Feature Importances:** (from prior models):
+    
 ![Feature Importances](assets/importance.png)
 Unsurpisingly, cognitive test scores (`MMSE`) and age (`AGE`) are the most predictive of Alzheimer's.
 
