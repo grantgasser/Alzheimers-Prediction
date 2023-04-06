@@ -75,8 +75,9 @@ AUC: 0.89
 ![Confusion Matrix](assets/confusion_matrix.png)
 
 **Feature Importances:** (from prior models):
-    
+
 ![Feature Importances](assets/importance.png)
+
 Unsurpisingly, cognitive test scores (`MMSE`) and age (`AGE`) are the most predictive of Alzheimer's.
 
 ### Solution v2 (2021): Multi-Class Prediction in Python (Jupyter Notebook)
