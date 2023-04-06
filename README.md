@@ -8,8 +8,8 @@ Data Science Project by Grant Gasser under advisement of [Dr. Joshua Patrick](ht
 # Table of Contents
 1. [Summary of Alzheimer's](https://github.com/grantgasser/Alzheimers-Prediction#summary-of-alzheimers-disease)
 2. [Project Motivation](https://github.com/grantgasser/Alzheimers-Prediction#project-motivation)
-3. [First Data Set](https://github.com/grantgasser/Alzheimers-Prediction#first-data-set-adni-q3)
-4. [Prediction Models, First Data Set](https://github.com/grantgasser/Alzheimers-Prediction#prediction-models)
+3. [Data Set](https://github.com/grantgasser/Alzheimers-Prediction#first-data-set-adni-q3)
+4. [Prediction Models, Data Set](https://github.com/grantgasser/Alzheimers-Prediction#prediction-models)
 
 
 ## Summary of Alzheimer's Disease
@@ -43,30 +43,49 @@ Sources: [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/alzheimers
 Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our goal to develop a computer model that assists in the diagnosis of the disease. We will try multiple models recently popularized in machine learning (Neural Network, SVM, etc.) and more traditional statistical models such as ordinal regression, multinomial regression, and decision trees. 
 
 ---
-## First Data Set: ADNI Q3
+## Data Set: ADNI Q3
 * 628 observations, 15 features (will likely use subset of features)
 * Labels: (CN, LMCI, AD)
 * Class Label distribution:
 ![alt-text](assets/class_distribution_q3.JPG "Class Distribution Image")
 * Features include age, gender, years of education, race, genotype, cognitive test score (MMSE), and more
 
-* There are six error scenarios:
+To simplify the problem, we collapse CN and LMCI into the same category of "Not AD" (aka "Not Alzheimer's").
 
-| Prediction    | Actual        |Error Type        |
-| ------------- |:-------------:|:-------------:|
-| CN     | LMCI | False Negative |
-| CN     | AD      | False Negative |
-| LMCI | CN      | False Positive |
-| LMCI     | AD | ? |
-| AD     | CN      | False Positive |
-| AD | LMCI      | ? |
-
-**Important Note:** The models using this data set assume the physician diagnoses (DX.bl) are correct.
+**Important Note:** The models using this data set assume the physician diagnoses (the labels) are correct.
 
 ---
-## Prediction Models
+## Predictive Models
 
-### Ordinal Regression (Ranking Learning) in R (CN < LMCI < AD)
+### Solution v3 (2023): Binary Classification with XGBoost
+* File: [Refactored Approach](Refactored_Approach_2023.ipynb)
+* `GradientBoostingClassifier`
+
+**Results:**
+```
+Test Accuracy: 90.48%
+Precision: 0.67
+Recall: 0.87
+F1: 0.75
+AUC: 0.89
+```
+
+**Initial confusion matrix** (_before lowering threshold 0.5 -> 0.1 to increase Recall_):
+![Confusion Matrix](assets/confusion_matrix.png)
+
+**Feature Importances:** (from prior models):
+![Feature Importances](assets/importance.png)
+Unsurpisingly, cognitive test scores (`MMSE`) and age (`AGE`) are the most predictive of Alzheimer's.
+
+### Solution v2 (2021): Multi-Class Prediction in Python (Jupyter Notebook)
+* File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
+* Since the data was processed with Scikit-Learn, it was easy to try several models using the library such as logistic regression, random forest, k-nearest-neighbor, and multi-layer perceptron.
+
+* 5-Fold Cross Validation: logistic regression had the highest validation score of `.69`
+
+**Results:** 74% Test Accuracy
+
+### Solution v1 (2019): Ordinal Regression (Ranking Learning) in R (CN < LMCI < AD)
 * File: [ordinal.R](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/ordinal.R)
 * Features/Predictor Variables Used: AGE (Age at baseline), PTGENDER (Sex), PTEDUCAT (Years of Education), PTRACCAT (Race), APOE4 (APOE4) genotype, MMSE (MMSE score), Imputed_genotype (Challenge specific designation, TRUE=has imputed genotypes)
 
@@ -75,11 +94,3 @@ Using data provided by the [ADNI Project](http://adni.loni.usc.edu/), it is our 
 * This leads to a model with low sensitivity.
 
 **Proposed Solution:** Only predict CN if P(CN) > *some threshold* instead of predicting max(P(CN), P(LMCI), P(AD)). This should reduce the amount of CN predictions and thus, reduce the amount of False Negatives.  
-
-### Multi-Class Prediction in Python (Jupyter Notebook)
-* File: [Multi-Class Classification Jupyter Notebook](https://github.com/grantgasser/Alzheimers-Prediction/blob/master/Multi-Class%20Classification%20ADNI.ipynb)
-* Since the data was processed with Scikit-Learn, it was easy to try several models using the library such as logistic regression, random forest, k-nearest-neighbor, and multi-layer perceptron.
-
-* 5-Fold Cross Validation: logistic regression had the highest validation score of `.69`
-
-**Results:** 74% Test Accuracy
