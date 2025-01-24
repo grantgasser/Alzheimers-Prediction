@@ -1,9 +1,10 @@
 
-
 # Alzheimer's Diagnosis
 Data Science Project by Grant Gasser under advisement of [Dr. Joshua Patrick](https://statistics.artsandsciences.baylor.edu/person/dr-joshua-d-patrick "Joshua Patrick") at Baylor University.
 
 ![ADNI Picture](assets/adni.png "ADNI")
+
+This is a test!
 
 # Table of Contents
 1. [Summary of Alzheimer's](https://github.com/grantgasser/Alzheimers-Prediction#summary-of-alzheimers-disease)
